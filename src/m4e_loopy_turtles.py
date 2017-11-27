@@ -50,7 +50,7 @@ window = rg.TurtleWindow()
 
 blue_turtle = rg.SimpleTurtle('turtle')
 blue_turtle.pen = rg.Pen('midnight blue', 3)
-blue_turtle.speed = 10  # Fast
+blue_turtle.speed = 100  # Fast
 
 # The first square will be 300 x 300 pixels:
 size = 300
@@ -71,6 +71,6 @@ for k in range(13):
     # Put the pen down again (so drawing resumes).
     # Make the size for the NEXT square be 12 pixels smaller.
     blue_turtle.pen_down()
-    size = size - 12
+    size = size - (k * 20)
 
 window.close_on_mouse_click()
